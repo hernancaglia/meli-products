@@ -1,16 +1,21 @@
-# This is a sample Python script.
+import requests
+import pandas as pd
 
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+PRODUCTS = ['motorola g6', 'chromecast']
 
 
-# Press the green button in the gutter to run the script.
+def get_item_ids(search):
+    response = requests.get("https://api.mercadolibre.com/sites/MLA/search?q=Motorola%20G6").json()
+    response_data = pd.json_normalize(response, record_path='results')
+    # response_data.to_csv('response_data.csv', sep=';')
+    item_ids = response_data['id']
+    return item_ids
+
+
+def main():
+    item_ids = get_item_ids(search=PRODUCTS[0])
+    print(type(item_ids))
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    main()
