@@ -10,6 +10,8 @@ Hacer requirements.txt
 Mover servicios a meli_service
 Check blank lines add
 try catch en item info?
+Hacer product info:
+https://api.mercadolibre.com/products/MLA9452524
 """
 
 OFFSET_PARAM = '&offset='
