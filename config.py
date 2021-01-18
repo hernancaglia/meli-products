@@ -1,14 +1,22 @@
 products = {
-    'Motorola G6',
-    'Chromecast',
-    'Notebook',
-    'Samsung S20',
-    'Macbook'
+    # 'Motorola G6',
+    # 'Chromecast',
+    # 'Google Home',
+    # 'Apple TV'
+    # 'Samsung Galaxy Tab',
+    # 'Samsung S20',
+    'Apple Macbook',
+    # 'Microsoft Surface',
+    # 'Dell XPS'
+    # 'Apple Macbook Air',
+    # 'HP Pavilion',
+    'Lenovo Ideapad',
+    'Dell Vostro'
 }
 
 api_search = dict(
     url='https://api.mercadolibre.com/sites/MLA/search?q=',
-    search_limit=10
+    search_limit=200
 )
 
 api_item = dict(
@@ -60,5 +68,26 @@ api_users = dict(
         'seller_reputation.transactions.ratings.neutral',
         'seller_reputation.transactions.ratings.negative'
         ''
+    }
+)
+
+api_products = dict(
+    url='https://api.mercadolibre.com/products/',
+    variables={
+        'domain_id',
+        'name'
+    }
+)
+
+api_reviews = dict(
+    url='https://api.mercadolibre.com/reviews/item/',
+    variables={
+        'paging.total',
+        'rating_average',
+        'rating_levels.one_star',
+        'rating_levels.two_star',
+        'rating_levels.three_star',
+        'rating_levels.four_star',
+        'rating_levels.five_star',
     }
 )
