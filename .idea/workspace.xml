@@ -2,16 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="688fbe00-a1b2-497a-a4fc-5bb6d651112a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/item.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/item_info.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/items.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/items_info.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/response.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/meli-products.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/meli-products.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_items.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_items_info.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3_items_info_result.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3_result.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4_item_questions.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_item_questions_result.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_result.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6_user_info.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_result.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/meli_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item_info.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/items.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/items_info.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/response.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/search_motorola.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +107,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
