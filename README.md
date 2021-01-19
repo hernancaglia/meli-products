@@ -12,7 +12,7 @@ Instalar las dependencias con *pip install -r requirements.txt*.
 ## How to use
 
 Modify config.py as desired:
-* products: Search terms to look for
+* products: Search terms to look for.
 * api_search: Search limit is the amount of items per search. I recommend 50 for a quick processing and 200 for deeper analysis.
 * api variables: Items' attributes to include. Add and remove as desired.
 
