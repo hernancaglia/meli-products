@@ -22,7 +22,6 @@ api_search = dict(
 api_item = dict(
     url='https://api.mercadolibre.com/items/',
     variables={
-        'id',
         'title',
         'seller_id',
         'category_id',

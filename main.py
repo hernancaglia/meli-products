@@ -37,7 +37,6 @@ def build_items():
             finally:
                 item_count += len(items_id)
             offset += 50
-            print(str(offset))
 
         print(str(item_count) + ' items found for ' + product)
         items_df = items_df.append(product_df[0:config.api_search['search_limit']], ignore_index=True)  # Add items to DF
@@ -47,16 +46,19 @@ def build_items():
 
 
 def main():
-    # Get items from each of the searches
+
+    # Get items from each of the queries
     items = build_items()
+    items.to_csv('0_items.csv')
 
     # Get items data
     items_info = meli.get_item_info(items)
-    result = items.merge(items_info, how='left', left_on='item_id', right_on='id', suffixes=[None, '_i'])
+    items_info.to_csv('0_items_info.csv')
+    result = items.merge(items_info, how='left', on='item_id', suffixes=[None, '_i']).set_index('item_id')
 
     # Get data from the items' questions
     item_questions = meli.get_item_questions(items)
-    result = result.merge(item_questions, how='left', left_on='item_id', right_on='item_id', suffixes=[None, '_q'])
+    result = result.merge(item_questions, how='left', on='item_id', suffixes=[None, '_q'])
 
     # Get data from the item's seller
     user_info = meli.get_user_info(pd.unique(items_info['seller_id']))
@@ -66,7 +68,8 @@ def main():
     product_info = meli.get_product_info(pd.unique(items_info['catalog_product_id']))
     result = result.merge(product_info, how='left', left_on='catalog_product_id', right_on='product_id', suffixes=[None, '_p'])
 
-    result.to_csv('rev.csv', sep=',')
+    result.set_index('item_id', inplace=True)
+    result.to_csv('meli_data.csv')
 
 
 if __name__ == '__main__':
