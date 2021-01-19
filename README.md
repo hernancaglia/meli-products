@@ -7,7 +7,6 @@ Obtains data from the items that appear when searching mercadolibre.com.ar and s
 Install Python 3.8.
 
 Install dependencies: *pip install -r requirements.txt*, or *conda install --file requirements.txt* if using Conda. Otherwise, just install Pandas 1.2.0 and Requests 2.25.1.
-Instalar las dependencias con *pip install -r requirements.txt*.
 
 ## How to use
 
