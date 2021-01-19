@@ -49,11 +49,9 @@ def main():
 
     # Get items from each of the queries
     items = build_items()
-    items.to_csv('0_items.csv')
 
     # Get items data
     items_info = meli.get_item_info(items)
-    items_info.to_csv('0_items_info.csv')
     result = items.merge(items_info, how='left', on='item_id', suffixes=[None, '_i']).set_index('item_id')
 
     # Get data from the items' questions

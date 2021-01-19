@@ -1,15 +1,5 @@
 products = {
-    # 'Motorola G6',
-    # 'Chromecast',
-    # 'Google Home',
-    # 'Apple TV'
-    # 'Samsung Galaxy Tab',
-    # 'Samsung S20',
     'Apple Macbook',
-    # 'Microsoft Surface',
-    # 'Dell XPS'
-    # 'Apple Macbook Air',
-    # 'HP Pavilion',
     'Lenovo Ideapad',
     'Dell Vostro'
 }
