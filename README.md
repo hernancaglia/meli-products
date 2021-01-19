@@ -1,6 +1,6 @@
 # meli-products
 
-Obtains data from the items that appear when searching mercadolibre.com.ar and stores it in meli_data.csv
+Obtains data from the items that appear when searching mercadolibre.com.ar and stores it in meli_data.csv.
 
 ## Installation
 
@@ -20,7 +20,7 @@ Modify config.py as desired:
 ## How it works
 
 The program connects to Mercadolibre's API (developers.mercadolibre.com.ar) and gets data from the following endpoints:
-* Sites: Gets items from a search - api.mercadolibre.com/sites
+* Sites: Gets items from each specified search - api.mercadolibre.com/sites
 * Items: Data from each item - api.mercadolibre.com/items
 * Questions: Questions asked in each item - api.mercadolibre.com/questions
 * Users: Data from the item's seller - api.mercadolibre.com/users
