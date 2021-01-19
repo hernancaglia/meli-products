@@ -25,7 +25,7 @@ def get_item_info(items):
         item_id = item[0]
         response = requests.get(config.api_item['url'] + item_id).json()
         item_info = pd.json_normalize(response)
-        item_info = item_info[config.api_item['variables']].set_index('id')
+        item_info = item_info[config.api_item['variables']]
         item_info['item_id'] = item_id
         items_info_df = items_info_df.append(item_info)
     return items_info_df
@@ -91,21 +91,20 @@ def get_product_info(product_ids):
     return product_info
 
 
-def get_reviews_info(items):
+def get_reviews_info(item_ids):
     print('Getting reviews info...')
-    item_reviews = pd.DataFrame()
-    for item in items.iterrows():
-        item_id = item[0]
-        response = requests.get(config.api_reviews['url'] + item_id).json()
+    reviews_info = pd.DataFrame()
+    for item in item_ids:
+        response = requests.get(config.api_reviews['url'] + str(item)).json()
         response_df = pd.json_normalize(response)
-        reviews_info = pd.DataFrame()
-        reviews_info['item_id'] = item_id
-        reviews_info.set_index('item_id', inplace=True)
-        for variable in config.api_questions['variables']:
+        review_df = pd.DataFrame()
+        review_df['item_id'] = item
+        review_df.set_index('item_id', inplace=True)
+        for variable in config.api_reviews['variables']:
             variable_name = 'reviews_' + variable
             try:
-                reviews_info.loc[item_id, variable_name] = response_df[variable][0]
+                review_df.loc[item, variable_name] = response_df[variable][0]
             except KeyError:
-                reviews_info.loc[item_id, variable_name] = ''
-        item_reviews = item_questions.append(reviews_info)
-    return item_reviews
+                review_df.loc[item, variable_name] = ''
+        reviews_info = reviews_info.append(review_df)
+    return reviews_info
