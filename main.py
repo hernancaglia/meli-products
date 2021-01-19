@@ -38,8 +38,8 @@ def build_items():
                 item_count += len(items_id)
             offset += 50
 
-        print(str(item_count) + ' items found for ' + product)
         items_df = items_df.append(product_df[0:config.api_search['search_limit']], ignore_index=True)  # Add items to DF
+        print(str(config.api_search['search_limit']) + ' items found for ' + product)
     items_df.set_index('item_id', inplace=True)
 
     return items_df

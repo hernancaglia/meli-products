@@ -1,7 +1,7 @@
 products = {
     'Apple Macbook',
     'Lenovo Ideapad',
-    'Dell Vostro'
+    'Dell Inspiron'
 }
 
 api_search = dict(
