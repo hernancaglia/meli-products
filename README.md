@@ -15,6 +15,8 @@ Modify config.py as desired:
 * api_search: Search limit is the amount of items per search. I recommend 50 for a quick processing and 200 for deeper analysis.
 * api variables: Items' attributes to include. Add and remove as desired.
 
+Run main.py
+
 
 ## How it works
 
