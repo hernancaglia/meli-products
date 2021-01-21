@@ -27,3 +27,7 @@ The program connects to Mercadolibre's API (developers.mercadolibre.com.ar) and 
 * Users: Data from the item's seller - api.mercadolibre.com/users
 * Products: Data from the item's product - api.mercadolibre.com/products
 
+
+## Data Analysis
+
+Link to Tableau Public: https://public.tableau.com/profile/hern.n1467#!/vizhome/MeliProductSearch/Story
