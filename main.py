@@ -2,15 +2,6 @@ import pandas as pd
 import config
 import meli_service as meli
 
-"""
-Could do:
-Add desired variables to api's params so it only requests those. Then remove pandas filtering.
-Change limit param to search only up to search_limit
-Refactor get_items_info so it only takes item_ids list instead of df
-Try catch in get_items_info?
-Refactor nested fors in meli service?
-"""
-
 
 def create_search_string(search):
     search_string = search.replace(' ', '%20')
